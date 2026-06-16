@@ -117,10 +117,14 @@ def connect_google_sheet():
             "https://www.googleapis.com/auth/drive"
         ]
 
-        creds = ServiceAccountCredentials.from_json_keyfile_name(
-            "credentials.json",
-            scope
-        )
+        # creds = ServiceAccountCredentials.from_json_keyfile_name(
+        #     "credentials.json",
+        #     scope
+        # )
+        creds = ServiceAccountCredentials.from_json_keyfile_dict(
+dict(st.secrets["gcp_service_account"]),
+    scope
+)
 
         client = gspread.authorize(creds)
 
