@@ -1,0 +1,13 @@
+streamlit
+langchain
+langchain-openai
+langchain-community
+pydantic
+openai
+gspread
+oauth2client
+pymupdf
+pytesseract
+pillow
+python-dotenv
+pandas
